@@ -19,14 +19,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/pkg/errors"
-	"github.com/prometheus/client_golang/prometheus"
-	"google.golang.org/protobuf/encoding/prototext"
 	"github.com/google/simhospital/pkg/clock"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/doctor"
-	"github.com/google/simhospital/pkg/fhir/cloud"
 	"github.com/google/simhospital/pkg/fhir"
+	"github.com/google/simhospital/pkg/fhir/cloud"
 	fhirmarshaller "github.com/google/simhospital/pkg/fhir/marshaller"
 	fhiroutput "github.com/google/simhospital/pkg/fhir/output"
 	"github.com/google/simhospital/pkg/generator"
@@ -43,8 +40,11 @@ import (
 	"github.com/google/simhospital/pkg/orderprofile"
 	"github.com/google/simhospital/pkg/pathway"
 	"github.com/google/simhospital/pkg/processor"
-	"github.com/google/simhospital/pkg/state/persist"
 	"github.com/google/simhospital/pkg/state"
+	"github.com/google/simhospital/pkg/state/persist"
+	"github.com/pkg/errors"
+	"github.com/prometheus/client_golang/prometheus"
+	"google.golang.org/protobuf/encoding/prototext"
 )
 
 const (

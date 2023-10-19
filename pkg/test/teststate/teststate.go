@@ -21,8 +21,8 @@ import (
 	"sort"
 
 	"github.com/golang-collections/go-datastructures/queue"
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/state/persist"
+	"github.com/pkg/errors"
 )
 
 const (

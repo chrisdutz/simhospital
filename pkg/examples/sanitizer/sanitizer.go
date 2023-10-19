@@ -25,13 +25,13 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"github.com/prometheus/client_golang/prometheus"
 	"github.com/google/simhospital/pkg/hl7"
 	"github.com/google/simhospital/pkg/hl7ids"
 	"github.com/google/simhospital/pkg/logging"
 	"github.com/google/simhospital/pkg/monitoring"
+	"github.com/pkg/errors"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/sirupsen/logrus"
 )
 
 var (

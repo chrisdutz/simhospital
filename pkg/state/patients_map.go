@@ -18,8 +18,8 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/state/persist"
+	"github.com/pkg/errors"
 )
 
 // PatientsMap contains the map of patients, indexed by their ID.

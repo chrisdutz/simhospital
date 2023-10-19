@@ -23,7 +23,8 @@ import (
 // Middleware works as a wrapper around http.HandlerFunc.
 // It verifies that the caller provided a valid api secret when requesting a authenticated endpoint.
 // This method is expecting the requests to contain a header with the format:
-//		"Authorization: value".
+//
+//	"Authorization: value".
 func Middleware(next http.HandlerFunc, apiKey string) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		authorizationHeader := req.Header.Get("Authorization")

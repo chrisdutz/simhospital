@@ -20,7 +20,6 @@ import (
 	"strings"
 	"time"
 
-	"google.golang.org/protobuf/proto"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/gender"
 	"github.com/google/simhospital/pkg/generator/codedelement"
@@ -28,6 +27,7 @@ import (
 	"github.com/google/simhospital/pkg/generator/order"
 	"github.com/google/simhospital/pkg/ir"
 	"github.com/google/simhospital/pkg/logging"
+	"google.golang.org/protobuf/proto"
 
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
 	dpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/datatypes_go_proto"

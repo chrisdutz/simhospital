@@ -22,13 +22,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/clock"
 	"github.com/google/simhospital/pkg/constants"
 	"github.com/google/simhospital/pkg/doctor"
 	"github.com/google/simhospital/pkg/ir"
 	"github.com/google/simhospital/pkg/location"
 	"github.com/google/simhospital/pkg/orderprofile"
+	"github.com/pkg/errors"
 )
 
 func (d *Delay) valid() error {

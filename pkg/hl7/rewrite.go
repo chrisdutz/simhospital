@@ -37,50 +37,49 @@ import "fmt"
 //
 // 1. Rewrite a value within a field.
 //
-//   // Rewrite the Zip code of a PID.
-//                                      ┌ Placeholder for the zip code
-//   // Example PID: "PID|1||||||||||^^^^^|"
-//   rewrite := func(t Token) *RewriteResult {
-//    if t.Location == "PID-11-Patient Address/XAD-5-Zip Or Postal Code" {
-//      return RewriteResultReplaceValue([]byte("49999"))
-//    }
-//    return RewriteResultNoop()
-//   }
+//	// Rewrite the Zip code of a PID.
+//	                                   ┌ Placeholder for the zip code
+//	// Example PID: "PID|1||||||||||^^^^^|"
+//	rewrite := func(t Token) *RewriteResult {
+//	 if t.Location == "PID-11-Patient Address/XAD-5-Zip Or Postal Code" {
+//	   return RewriteResultReplaceValue([]byte("49999"))
+//	 }
+//	 return RewriteResultNoop()
+//	}
 //
 // 2. Rewrite an entire field.
 //
-//   // Rewrite the entire Mother's Maiden Name field or a PID. The fields needs to be present.
-//                             ┌ Placeholder for the Mother's Maiden Name.
-//   // Example PID: "PID|1||||||"
-//   rewrite := func(t Token) *RewriteResult {
-//     if t.Location == "PID-6-Mother'S Maiden Name" {
-//       return RewriteResultReplaceValue([]byte("Doe^Jane"))
-//     }
-//     return RewriteResultNoop()
-//   }
+//	// Rewrite the entire Mother's Maiden Name field or a PID. The fields needs to be present.
+//	                          ┌ Placeholder for the Mother's Maiden Name.
+//	// Example PID: "PID|1||||||"
+//	rewrite := func(t Token) *RewriteResult {
+//	  if t.Location == "PID-6-Mother'S Maiden Name" {
+//	    return RewriteResultReplaceValue([]byte("Doe^Jane"))
+//	  }
+//	  return RewriteResultNoop()
+//	}
 //
 // 3. Rewrite an entire segment.
 //
-//   // Rewrite the entire PID to add more placeholders.
-//   // Example PID: "PID|1||"
-//   rewrite := func(t Token) *RewriteResult {
-//     if t.Location == "PID" {
-//       return RewriteResultReplaceValue([]byte("PID|1|||||Doe^Jane"))
-//     }
-//     return RewriteResultNoop()
-//   }
+//	// Rewrite the entire PID to add more placeholders.
+//	// Example PID: "PID|1||"
+//	rewrite := func(t Token) *RewriteResult {
+//	  if t.Location == "PID" {
+//	    return RewriteResultReplaceValue([]byte("PID|1|||||Doe^Jane"))
+//	  }
+//	  return RewriteResultNoop()
+//	}
 //
 // 4. Delete an entire segment.
 //
-//   // Delete all OBX segments.
-//   // Example OBX: "OBX|1||"
-//   rewrite := func(t Token) *RewriteResult {
-//     if t.Location == "OBX" {
-//       return RewriteResultDeleteToken()
-//     }
-//     return RewriteResultNoop()
-//   }
-//
+//	// Delete all OBX segments.
+//	// Example OBX: "OBX|1||"
+//	rewrite := func(t Token) *RewriteResult {
+//	  if t.Location == "OBX" {
+//	    return RewriteResultDeleteToken()
+//	  }
+//	  return RewriteResultNoop()
+//	}
 type Rewrite func(t Token) *RewriteResult
 
 // RewriteResult determines the action to take for a rewrite, optionally including a new value.

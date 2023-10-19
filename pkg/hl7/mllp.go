@@ -19,8 +19,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/logging"
+	"github.com/pkg/errors"
 )
 
 const (

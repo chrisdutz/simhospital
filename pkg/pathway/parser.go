@@ -19,13 +19,13 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/pkg/errors"
-	"gopkg.in/yaml.v2"
 	"github.com/google/simhospital/pkg/clock"
 	"github.com/google/simhospital/pkg/doctor"
 	"github.com/google/simhospital/pkg/files"
 	"github.com/google/simhospital/pkg/location"
 	"github.com/google/simhospital/pkg/orderprofile"
+	"github.com/pkg/errors"
+	"gopkg.in/yaml.v2"
 )
 
 // UnknownPathwayName is the default pathway name, if it is not explicitly specified.

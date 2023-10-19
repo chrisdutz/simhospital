@@ -30,11 +30,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pkg/errors"
-	"golang.org/x/text/encoding/charmap"
-	"golang.org/x/text/encoding"
-	"golang.org/x/text/encoding/unicode"
 	"github.com/google/simhospital/pkg/constants"
+	"github.com/pkg/errors"
+	"golang.org/x/text/encoding"
+	"golang.org/x/text/encoding/charmap"
+	"golang.org/x/text/encoding/unicode"
 )
 
 const (
@@ -647,7 +647,7 @@ func parseValue(input Token, c *Context, v reflect.Value) error {
 	case reflect.Struct:
 		return parseCompositeValue(input, c, v)
 	default:
-		panic("Unexpected kind: " + string(v.Kind()) + " type: " + v.Type().Name()) // Implies a bug in the parser.
+		panic("Unexpected kind: " + fmt.Sprintf("%d", v.Kind()) + " type: " + v.Type().Name()) // Implies a bug in the parser.
 	}
 }
 
@@ -818,7 +818,7 @@ func marshalValue(v reflect.Value, c *Context) ([]byte, error) {
 		return marshalRepeatedValue(v, c)
 	default:
 		// Implies a bug in the marshaller.
-		panic("Unexpected kind: " + string(v.Kind()) + " type: " + v.Type().Name())
+		panic("Unexpected kind: " + fmt.Sprintf("%d", v.Kind()) + " type: " + v.Type().Name())
 	}
 }
 

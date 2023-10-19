@@ -49,7 +49,7 @@ func TestCodingSystemConvertorHL7ToFHIR(t *testing.T) {
 	}
 
 	wantMapping := map[string]string{
-		"": "",
+		"":        "",
 		"UNKNOWN": "UNKNOWN",
 		"SNM3":    "http://snomed.info/sct",
 		"ACME":    "https://acme.lab/resultcodes",

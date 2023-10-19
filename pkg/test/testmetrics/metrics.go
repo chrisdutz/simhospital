@@ -23,8 +23,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/prometheus/client_golang/prometheus"
-	"google.golang.org/protobuf/testing/protocmp"
 	pb "github.com/prometheus/client_model/go"
+	"google.golang.org/protobuf/testing/protocmp"
 )
 
 type retrieveMetricsFunc func() map[string]*pb.MetricFamily

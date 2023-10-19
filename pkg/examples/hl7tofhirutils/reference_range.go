@@ -22,8 +22,8 @@ import (
 
 	pb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/datatypes_go_proto"
 	observationpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/resources/observation_go_proto"
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/hl7tofhirmap"
+	"github.com/pkg/errors"
 
 	fhir "github.com/google/simhospital/pkg/fhircore"
 	"github.com/google/simhospital/pkg/logging"

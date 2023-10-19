@@ -21,7 +21,6 @@ import (
 	"time"
 
 	cpb "github.com/google/fhir/go/proto/google/fhir/proto/r4/core/codes_go_proto"
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/config"
 	"github.com/google/simhospital/pkg/constants"
 	"github.com/google/simhospital/pkg/doctor"
@@ -32,6 +31,7 @@ import (
 	"github.com/google/simhospital/pkg/message"
 	"github.com/google/simhospital/pkg/orderprofile"
 	"github.com/google/simhospital/pkg/pathway"
+	"github.com/pkg/errors"
 )
 
 var log = logging.ForCallerPackage()

@@ -22,8 +22,8 @@ import (
 	"net/http/pprof"
 
 	"github.com/pkg/errors"
-	"golang.org/x/net/trace"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"golang.org/x/net/trace"
 )
 
 // ListenAndServeMetrics initialises a new HTTP Server in the address specified in the parameter.

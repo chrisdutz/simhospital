@@ -29,14 +29,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pkg/errors"
-	"gopkg.in/yaml.v2"
 	"github.com/google/simhospital/pkg/files"
 	"github.com/google/simhospital/pkg/generator/header"
 	"github.com/google/simhospital/pkg/hl7"
 	"github.com/google/simhospital/pkg/ir"
 	"github.com/google/simhospital/pkg/logging"
 	"github.com/google/simhospital/pkg/message"
+	"github.com/pkg/errors"
+	"gopkg.in/yaml.v2"
 )
 
 // pidSegmentPlaceholder defines a placeholder for the PID segments, which

@@ -22,7 +22,6 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/pkg/errors"
 	"github.com/google/simhospital/pkg/constants"
 	"github.com/google/simhospital/pkg/doctor"
 	"github.com/google/simhospital/pkg/ir"
@@ -31,6 +30,7 @@ import (
 	"github.com/google/simhospital/pkg/test/testclock"
 	"github.com/google/simhospital/pkg/test/testlocation"
 	"github.com/google/simhospital/pkg/test/testwrite"
+	"github.com/pkg/errors"
 )
 
 var (
